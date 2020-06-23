@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="TopCovid - Teste de Deployment Engenharia Software TSIW">
+    <meta name="keywords" content="teste, deployment, engenharia, siftware, tsiw, esmad, alexandre, maia">
+    <meta name="author" content="Alexandre Maia">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopCovid</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="js.js"></script>
+</head>
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <main role="main" class="inner-cover">
+            <img src="https://covid19api.com/assets/images/image06.png?v19509205981951" alt="Covid 19 Api Logo">
+            <br>
+            <div class="form-group">
+                <label for="facet">Selecione a faceta que pretende</label>
+                <select id="facet" name="facet" class="form-control">
+                    <option value="TotalConfirmed">Confirmados</option>
+                    <option value="TotalDeaths">Mortos</option>
+                    <option value="TotalRecovered">Recuperados</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="top">Número Países a listar</label>
+                <select id="top" class="form-control" custom-select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-danger" onclick="getResults()">Pesquisar</button>
+            </div>
+            <br>
+            <div id="tableCard" class="card" style="display: none;">
+                <div id="cardTitle" class="card-header"></div>
+                    <table id="topCovidTable" class="card-table table">
+                        <thead>
+                          <tr>
+                            <th scope="col">País</th>
+                            <th scope="col">#</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                <div id="cardDate" class="card-footer"></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
