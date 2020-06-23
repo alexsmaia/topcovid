@@ -11,53 +11,58 @@
     <script src="js.js"></script>
 </head>
 <body class="text-center">
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-        <main role="main" class="inner-cover">
-            <img src="https://covid19api.com/assets/images/image06.png?v19509205981951" alt="Covid 19 Api Logo">
-            <br>
-            <div class="form-group">
-                <label for="facet">Selecione a faceta que pretende</label>
-                <select id="facet" name="facet" class="form-control">
-                    <option value="TotalConfirmed">Confirmados</option>
-                    <option value="TotalDeaths">Mortos</option>
-                    <option value="TotalRecovered">Recuperados</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="top">Número Países a listar</label>
-                <select id="top" class="form-control" custom-select>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <button type="button" class="btn btn-danger" onclick="getResults()">Pesquisar</button>
-            </div>
-            <br>
-            <div id="tableCard" class="card" style="display: none;">
-                <div id="cardTitle" class="card-header"></div>
-                    <table id="topCovidTable" class="card-table table">
-                        <thead>
-                          <tr>
-                            <th scope="col">País</th>
-                            <th scope="col">#</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            
-                        </tbody>
-                    </table>
-                <div id="cardDate" class="card-footer"></div>
+    <div class="container d-flex flex-column">
+        <main role="main" class="row justify-content-center">
+            <div class="col-8">
+                <img class="img-fluid" src="https://media.istockphoto.com/vectors/coronavirus-logo-coronavirus-covid19-logo-coronavirus-with-bacteria-vector-id1212732303" alt="Covid 19">
+                <br>
+                <div class="form-group">
+                    <label for="facet">Selecione a faceta que pretende</label>
+                    <select id="facet" name="facet" class="form-control">
+                        <option value="TotalConfirmed">Confirmados</option>
+                        <option value="TotalDeaths">Mortos</option>
+                        <option value="TotalRecovered">Recuperados</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="top">Número Países a listar</label>
+                    <select id="top" class="form-control" custom-select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-danger" onclick="getResults()">Pesquisar</button>
+                </div>
+                <br>
+                <div id="tableCard" class="card" style="display: none;">
+                    <img id="cardTopImg" class="card-img-top" src="" alt="Covid">
+                    <div id="cardTitle" class="card-header"></div>
+                        <table id="topCovidTable" class="card-table table">
+                            <thead>
+                            <tr>
+                                <th scope="col">País</th>
+                                <th scope="col">#</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                    <div id="cardDate" class="card-footer"></div>
+                </div>
             </div>
         </main>
+        <br>
+        <br>
     </div>
 </body>
 </html>

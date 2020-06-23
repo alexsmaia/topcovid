@@ -29,6 +29,21 @@ function getResults() {
     let slicedCountries = countriesData.slice(0, topV);
     //console.log(slicedCountries);
 
+    // Set Card Img
+    let cardTopImg = document.getElementById("cardTopImg");
+    switch (facetV) {
+        case "TotalConfirmed":
+            cardTopImg.src = "https://images.impresa.pt/sicnot/2020-03-10-teste-positivo-coronavirus.jpg/original/mw-960";
+            break;
+        case "TotalDeaths":
+            cardTopImg.src = "https://www.dnoticias.pt/binrepository/768x513/0c41/768d432/none/11506/TSVR/image_content_2844664_20200318181536.jpg";
+            break;
+        case "TotalRecovered":
+            cardTopImg.src = "https://receitasmodernas.com/wp-content/uploads/2018/10/0-1.jpg";
+            break;
+    
+    }
+
     // Set Card Title
     document.getElementById("cardTitle").innerHTML = facetL;
 
@@ -51,7 +66,6 @@ function getResults() {
     let date = covidApi.Date.substring(0, 10);
     document.getElementById("cardDate").innerHTML = date;
     
-
     // Get Card
     let tableCard = document.getElementById("tableCard");
     if (tableCard.style.display === "none") {
